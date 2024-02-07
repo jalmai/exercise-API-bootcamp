@@ -81,6 +81,10 @@ function conferenceLister() {
       });
       let attendingAttendeesHtml = arrayToList(attendingAttendees);
       let allergicAttendeesHtml = arrayToList(allergicAttendees);
+      document.querySelector(".conference").appendChild(attendingAttendeesHtml);
+      document
+        .querySelector(".conference-allergies")
+        .appendChild(allergicAttendeesHtml);
     } else {
       console.error("Error: ", confRequest.status);
     }
